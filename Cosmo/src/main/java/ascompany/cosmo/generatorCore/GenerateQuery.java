@@ -61,16 +61,8 @@ public class GenerateQuery
                     System.out.println(pckToClass);
                     
                     String className = pckToClass.substring(pckToClass.lastIndexOf('/') + 1).trim();
-                    if(className.equals(pckToClass))
-                    {
-                        className = pckToClass.substring(pckToClass.lastIndexOf('\\') + 1).trim();
-                    }
                     
                     int lastIndexOf = pckToClass.lastIndexOf('/');
-                    if(lastIndexOf == -1)
-                    {
-                        lastIndexOf = pckToClass.lastIndexOf('\\');
-                    }
                     String pkg = pckToClass.substring(0,lastIndexOf);
                     
                     ArrayList<JsonObject> listaQuery = map.getValue();
@@ -86,7 +78,7 @@ public class GenerateQuery
                         throw new Exception("Mission path to 'File.java' in 'packageToClass'");
                     }
                     ModelHelper m = new ModelHelper()
-                        .toPackage(pkg.replace('/','.').replace('\\','.').substring(1, pkg.length()))
+                        .toPackage(pkg.replace('/','.'))
                         .withAccessMode(ConfigName.PUBLIC)
                         .withKey(ConfigName.CLASS)
                         .className(capitalizeFirstLetter(className.substring(0, className.indexOf('.'))))
