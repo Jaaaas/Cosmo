@@ -10,9 +10,12 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 
 /**
  *
@@ -63,4 +66,32 @@ public class Utility
     {
         return s.substring(0, s.length() - 1);
     }
+    
+    /**
+     * Funzione utilizzata per creare il file .java
+     * 
+     * @param nomeClasse nome del file da dover creare
+     * @param source stringa contenente il codice sorgente
+     * @param path percorso di creazioen
+     * @throws Exception 
+     */
+    public static void creaFileJava(String nomeClasse, String source, String path) throws Exception
+    {
+        File root = new File(path);
+        File sourceFile = new File(root, "/"+nomeClasse+".java");
+        sourceFile.getParentFile().mkdirs();
+        Files.write(sourceFile.toPath(), source.getBytes(StandardCharsets.UTF_8));
+    }
+    
+    /**
+     * Funzione che Capitalizza la prima lettera di una parola
+     * 
+     * @param input stringa di cui bisgona capitalizzare la prima lettera
+     * @return stringa capitalizzata
+     */
+    public static String capitalizeFirstLetter(String input)
+    {
+        return input.substring(0, 1).toUpperCase() + input.substring(1);
+    }
+    
 }

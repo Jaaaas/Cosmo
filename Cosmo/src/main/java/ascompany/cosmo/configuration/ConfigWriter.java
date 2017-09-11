@@ -21,7 +21,7 @@ public class ConfigWriter
         JsonArray listaQuery = new JsonArray();
         
         JsonObject query = new JsonObject();
-        query.addProperty(ConfigName.PATH_TO_CLASS, "");
+        query.addProperty(ConfigName.PKG_TO_CLASS, "");
         query.addProperty(ConfigName.METHOD_NAME, "");
         query.addProperty(ConfigName.QUERY, "");
         

@@ -19,5 +19,7 @@ public @interface CosmoGen
      * 
      * @return percorso dove verranno creati i metodi
      */
-    String path();
+    String pkgToConfig();
+    String basePath();
+    String fileName();
 }

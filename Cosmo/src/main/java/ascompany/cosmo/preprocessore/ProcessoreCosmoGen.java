@@ -53,11 +53,10 @@ public class ProcessoreCosmoGen extends AbstractProcessor
             {
                 CosmoGen cosmoGen = elem.getAnnotation(CosmoGen.class);
 
-                File file = new File(cosmoGen.path() + ConfigName.JSON_NAME);
+                File file = new File(cosmoGen.basePath() + cosmoGen.pkgToConfig()+ cosmoGen.fileName()+".json");
                 if(file.exists() && !file.isDirectory()) 
                 {
-                    GenerateQuery.Create(Utility.convertFileToJson(file.getAbsolutePath()));
-                    
+                    GenerateQuery.Create(cosmoGen.basePath(), Utility.convertFileToJson(file.getAbsolutePath()));
                 }
                 else
                 {
