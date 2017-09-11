@@ -86,12 +86,12 @@ public class GenerateQuery
                         throw new Exception("Mission path to 'File.java' in 'packageToClass'");
                     }
                     ModelHelper m = new ModelHelper()
-                        .toPackage(pkg.replace('/','.').replace('\\','.'))
+                        .toPackage(pkg.replace('/','.').replace('\\','.').substring(1, pkg.length()))
                         .withAccessMode(ConfigName.PUBLIC)
                         .withKey(ConfigName.CLASS)
                         .className(capitalizeFirstLetter(className.substring(0, className.indexOf('.'))))
                         .addMethods(listaMetodi)
-                        .terminate("asd");
+                        .terminate();
                     
                     System.out.println(m.classString);
                     File fileToRecreate = new File(basePath + pkg);

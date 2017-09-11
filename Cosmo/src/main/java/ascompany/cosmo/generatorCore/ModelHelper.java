@@ -198,7 +198,7 @@ public class ModelHelper
      * @return Istanza di classe
      * @throws Exception 
      */
-    public ModelHelper terminate(String path) throws Exception
+    public ModelHelper terminate() throws Exception
     {
         this.classString = 
         this.packageString + newLine(2) +
