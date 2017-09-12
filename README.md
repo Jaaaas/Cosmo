@@ -119,5 +119,5 @@ In this case, two creation files will be created in which we can separate the qu
 
 * **Testing**
 * **Maven integration**
-* **New options for function creation (for example the ability to specify annotations, exceptions in creating the method)**
+* **New options for function creation (for example the possibility to specify annotations, exceptions in creating the method)**
 * **Improves performance**
