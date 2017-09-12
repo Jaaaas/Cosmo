@@ -127,6 +127,7 @@ In this case, two creation files will be created in which we can separate the qu
 
 ### Related project
 * **[Sinfonia](https://github.com/Jaaaas/Sinfonia/)**
+* **[Dinamo](https://github.com/Tignaman/Dinamo)**
 
 ### Contributors
 * **[suxl89](https://github.com/suxl89)**
