@@ -1,4 +1,3 @@
-
 package ascompany.cosmo.configuration;
 
 /**

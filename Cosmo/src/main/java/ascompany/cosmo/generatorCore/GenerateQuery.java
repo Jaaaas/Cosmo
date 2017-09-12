@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ascompany.cosmo.generatorCore;
 
 import ascompany.cosmo.configuration.ConfigName;
@@ -58,7 +53,6 @@ public class GenerateQuery
                 for(Map.Entry<String, ArrayList<JsonObject>> map : hm.entrySet()) 
                 {
                     String pckToClass = map.getKey();
-                    System.out.println(pckToClass);
                     
                     String className = pckToClass.substring(pckToClass.lastIndexOf('/') + 1).trim();
                     
@@ -85,7 +79,6 @@ public class GenerateQuery
                         .addMethods(listaMetodi)
                         .terminate();
                     
-                    System.out.println(m.classString);
                     File fileToRecreate = new File(basePath + pkg);
                     fileToRecreate.delete();
                     
