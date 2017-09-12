@@ -86,7 +86,7 @@ Example:
     ]
 ```
 Now we just need to rebuild the project and a SomethingQueries.java file will be created with the specified functions.
-you can surely write multiple queries within the same configuration file.
+You can surely write multiple queries within the same configuration file.
 
 *In order to add next queries functions, SomethingQueries.java file will be deleted and recreated.*
 
