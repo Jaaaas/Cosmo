@@ -110,3 +110,14 @@ That's why we can create:
     )
     String cosmoConfigSomethingElse;
 ```
+In this case, two creation files will be created in which we can separate the queries by entities.
+
+### Related project
+* **[Sinfonia](https://github.com/Jaaaas/Sinfonia/)**
+
+### Future developments
+
+* **Testing**
+* **Maven integration**
+* **New options for function creation (for example the ability to specify annotations, exceptions in creating the method)**
+* **Improves performance**
