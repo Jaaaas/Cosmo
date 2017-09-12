@@ -16,7 +16,8 @@ Cosmo is an **annotation processor** that through one or more configuration file
 ## Getting Started
 
 ### Prerequisites
-In order to use Cosmo you simply need to import the **JAR** into the project and you can use its features.
+In order to use Cosmo you simply need to import the **JAR** (
+you can download it from here [Cosmo](https://github.com/Jaaaas/Cosmo/files/1296088/Cosmo-1.0.zip) or from the releases) into the project and you can use its features.
 
 ### Usage
 Cosmo is an annotation processor. The annotation that is used is **@CosmoGen**. The CosmoGen annotation has as RetentionPolicy **SOURCE**, so it is discarded by the compiler.
