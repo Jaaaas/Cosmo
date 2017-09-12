@@ -115,6 +115,11 @@ In this case, two creation files will be created in which we can separate the qu
 ### Related project
 * **[Sinfonia](https://github.com/Jaaaas/Sinfonia/)**
 
+### Contributors
+* **[suxl89](https://github.com/suxl89)**
+* **[Nazzareno Di Pietro](https://github.com/Tignaman)**
+* **[fpafumi](https://github.com/fpafumi)**
+
 ### Future developments
 
 * **Testing**
