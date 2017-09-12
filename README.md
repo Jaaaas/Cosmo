@@ -19,7 +19,7 @@ Cosmo is an **annotation processor** that through one or more configuration file
 In order to use Cosmo you simply need to import the **JAR** into the project and you can use its features.
 
 ### Usage
-Cosmos is an annotation processor. The annotation that is used is **@CosmoGen**. The CosmoGen annotation has as RetentionPolicy **SOURCE**, so it is discarded by the compiler.
+Cosmo is an annotation processor. The annotation that is used is **@CosmoGen**. The CosmoGen annotation has as RetentionPolicy **SOURCE**, so it is discarded by the compiler.
 
 ```java
 @Retention(RetentionPolicy.SOURCE)
@@ -38,6 +38,7 @@ We can see from the above code that we have to pass 3 parameters:
 * **fileName**: configuration file name.
 
 Example:
+
 ```java
 public class CosmoTest
 {
@@ -50,8 +51,62 @@ public class CosmoTest
     String cosmoConfiguration;
 }
 ```
-After doing this, simply build the project and json file ,with the given fileName, will be created at the specified *basePath/pkgToConfig*.
 
+After doing this, simply build the project and json file ,with the given *fileName*, will be created at the specified *basePath/pkgToConfig*.
 
+The json should be the following:
 
+```json
+{
+    "toCreate": 
+    [
+        {
+            "packageToClass": "",
+            "functionName": "",
+            "query": ""
+        }
+    ]
+}
+```
 
+* **packageToClass**: relative path(**including a className.java**) starting from basePath specified before.
+* **functionName**: name of the function that will be created.
+* **query**: query we need.
+
+Example:
+
+```json
+"toCreate": 
+    [
+        {
+            "packageToClass": "CosmoQueries/SomethingQueries.java",
+            "functionName": "SelectSomething",
+            "query": "SELECT * FROM Something"
+        }
+    ]
+```
+Now we just need to rebuild the project and a SomethingQueries.java file will be created with the specified functions.
+you can surely write multiple queries within the same configuration file.
+
+*In order to add next queries functions, SomethingQueries.java file will be deleted and recreated.*
+
+We highly recommend creating different configuration files based on the entity or based on the query type.
+That's why we can create:
+
+```java
+@CosmoGen
+    (
+        basePath="absolute/path/to/thisProject/src/",
+        pkgToConfig="CosmoConfig/",
+        fileName="CosmoSomethingQueries"
+    )
+    String cosmoConfigSomething;
+    
+    @CosmoGen
+    (
+        basePath="absolute/path/to/thisProject/src/",
+        pkgToConfig="CosmoConfig/",
+        fileName="CosmoSomethingElseQueries"
+    )
+    String cosmoConfigSomethingElse;
+```
