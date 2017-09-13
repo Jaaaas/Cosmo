@@ -108,20 +108,20 @@ That's why we can create:
 
 ```java
 @CosmoGen
-    (
-        basePath="absolute/path/to/thisProject/src/",
-        pkgToConfig="CosmoConfig/",
-        fileName="CosmoSomethingQueries"
-    )
-    String cosmoConfigSomething;
-    
-    @CosmoGen
-    (
-        basePath="absolute/path/to/thisProject/src/",
-        pkgToConfig="CosmoConfig/",
-        fileName="CosmoSomethingElseQueries"
-    )
-    String cosmoConfigSomethingElse;
+(
+    basePath="absolute/path/to/thisProject/src/",
+    pkgToConfig="CosmoConfig/",
+    fileName="CosmoSomethingQueries"
+)
+String cosmoConfigSomething;
+
+@CosmoGen
+(
+    basePath="absolute/path/to/thisProject/src/",
+    pkgToConfig="CosmoConfig/",
+    fileName="CosmoSomethingElseQueries"
+)
+String cosmoConfigSomethingElse;
 ```
 In this case, two creation files will be created in which we can separate the queries by entities.
 
