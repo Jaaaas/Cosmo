@@ -1,6 +1,6 @@
 # Cosmo
 
-> **Java Annotation Processor that helps query creation inside java files.**
+> **Work-in-progress Java Annotation Processor that helps query creation inside java files.**
 
 ## Overview
 
