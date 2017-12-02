@@ -20,7 +20,7 @@ public class ConfigName
     
     public static final String PUBLIC = "public";
     
-    public static final String STATIC = "public static";
+    public static final String STATIC = "static";
     
     public static final String CLASS = "class";
    
