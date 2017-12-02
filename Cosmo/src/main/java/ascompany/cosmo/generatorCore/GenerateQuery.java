@@ -64,7 +64,7 @@ public class GenerateQuery
                     
                     for(JsonObject jo : listaQuery)
                     {
-                        listaMetodi.add(new Method((staticMethods ? ConfigName.STATIC : ConfigName.PUBLIC),ConfigName.STRING,jo.get(ConfigName.METHOD_NAME).getAsString(),"return \""+ jo.get(ConfigName.QUERY).getAsString() +"\";"));
+                        listaMetodi.add(new Method(ConfigName.PUBLIC + (staticMethods ? " "+ConfigName.STATIC : ""),ConfigName.STRING,jo.get(ConfigName.METHOD_NAME).getAsString(),"return \""+ jo.get(ConfigName.QUERY).getAsString() +"\";"));
                     }
                     
                     if(className.indexOf('.') == -1)
