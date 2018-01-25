@@ -175,7 +175,7 @@ public class ModelHelper
         for(Method m : methods)
         {
             this.methods += 
-                this.tab(1) + m.access +" "+ m.returning +" "+ m.name+"()" + 
+                this.tab(1) + m.access +" static "+ m.returning +" "+ m.name+"()" + 
                 newLine(1)  +
                 this.tab(1) + openBracket()+
                 this.tab(2) + m.body +
