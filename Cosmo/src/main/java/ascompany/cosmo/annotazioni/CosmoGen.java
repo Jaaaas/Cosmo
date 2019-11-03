@@ -17,4 +17,5 @@ public @interface CosmoGen
     String pkgToConfig();
     String basePath();
     String fileName();
+    boolean staticMethods();
 }
